@@ -1,0 +1,91 @@
+.title-meself {
+	text-align: center;
+	font-size: 30px;
+	background-color: #F5DEB3;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	outline: 2px solid #000;
+	font-family: 'Bender'
+}
+
+.main-myself
+{
+  background-color: #FFF8DC;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.left-myself, .right-myself
+{
+	width: 50%;
+ 	/*background: orange;*/
+ 	padding: 10px;
+ 	margin-right: 5px;
+ 	/*height: 600px;*/
+}
+
+.left-myself{
+	box-shadow: 2px 0 0 0 black;
+}
+
+.hello-myself{
+	text-align: center;
+	font-size: 20px;
+	padding-top: 20px;
+}
+
+.persinf-myself {
+	margin: 30px 0 5px 20px;
+	font-size: 20px;
+}
+
+.info-myself {
+	margin: 10px 0 5px 50px;
+	font-size: 17px;
+}
+.add-myself {
+	margin: 10px 0 5px 100px;
+	padding: 20px 0 20px 0;
+}
+
+.click-myself {
+	box-shadow: 2px 2px 2px 2px grey;
+	padding: 10px 0 10px 0;
+	text-align: center;
+	margin: 20px 65% 10px 5%;
+	border-radius: 10px;
+	background-color: #f5f5f5;
+}
+
+.botton-myself {
+	padding: 40px 47% 0 47%;
+	background-color: #F5DEB3;
+	height: 200px;
+	outline: 2px solid #000;
+}
+
+
+a {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(75, 0, 130);
+  box-shadow: 0 -3px rgb(106, 90, 205) inset;
+  transition: 0.2s;
+}
+a:visited {
+  background: rgb(72, 61, 139);
+  box-shadow: 0 3px rgb(72, 61, 139) inset;
+} 
+a:active {
+  background: rgb(72, 61, 139);
+  box-shadow: 0 3px rgb(72, 61, 139) inset;
+} 
+
+a:hover {
+	background: rgb(106, 90, 205);
+} 
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/signup.css">
+    <link href="../static/css/Bender.ttf" rel="stylesheet" >
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Unbounded&display=swap" rel="stylesheet">
+</head>
+<body >
+    <div class='title-reg'>Налоговая инспекиция</div>
+    <div class='regform-reg'>
+        <div class='name-reg'>Регистрация</div>
+        <form action="" method="post">
+            <div class="input-reg">
+                <label for="surname"><b>Фамилия</b></label>
+                <input name="surname" type="text" placeholder="фамилия" required="required" />
+            </div>
+            <div class="input-reg">
+                <label for="name"><b>Имя</b></label>
+                <input name="name" type="text" placeholder="имя" required="required" />
+            </div>
+            <div class="input-reg">
+                <label for="address"><b>Адрес</b></label>
+                <input name="address" type="text" placeholder="адрес" required="required" />
+            </div>
+            <div class="input-reg">
+                <label for="passport"><b>Номер пасспорта</b></label>
+                <input name="passport" type="text" placeholder="пасспорт" required="required" />
+            </div>
+            <div class="input-reg">
+                <label for="phone"><b>Телефон</b></label>
+                <input name="phone" type="text" placeholder="телефон" required="required" />
+            </div>
+            <div class="input-reg">
+                <label for="status">Юридический статус:</label>
+                <select name="status" id="cars">
+                    {% for item in statuses %}
+                        <option value="{{item['name']}}">{{item['name']}}</option>
+                    {% endfor %}
+            </select>
+            </div>
+            <div class="input-reg">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="email" name="email" required>
+            </div>
+            <div class="input-reg">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            </div>
+            <div class="input-reg">
+
+                <label for="psw2"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw2" required>
+            </div>
+            <div class="btn-reg">
+                <button type="submit" class="my-btn" >Регистрация</button>
+            </div>
+        </form>
+    </div>
+
+    <b>Есть аккаунт?</b>
+    <a href="{{url_for('login')}}">Войти</a>
+
+</body>
+</html>

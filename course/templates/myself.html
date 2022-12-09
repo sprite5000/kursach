@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/myself.css">
+    <link href="../static/css/Bender.ttf" rel="stylesheet" >
+</head>
+<body >
+    <div class='title-meself'>Налоговая инспекиция</div>
+    <div class="main-myself">
+        <div class="left-myself">
+            <div class="hello-myself">
+                <h1>Здравствуйте, {{me['name']}} {{me['surname']}}</h1>
+            </div>
+            <div class="persinf-myself">
+                <h3>Личные данные:</h3>
+            </div>
+            <div class="info-myself">  
+                Ваш номер телефона: {{me['phoneNumber']}}
+            </div>  
+            <div class="info-myself">  
+                Ваш адрес: {{me['address']}}
+            </div>   
+            <div class="info-myself">  
+                Ваша почта: {{me['email']}}
+            </div>  
+
+            <div>
+                <div class="persinf-myself">
+                    <h3>Ваш юридический статус:</h3>
+                </div>
+                <div class="info-myself">
+                    {{status['name']}} (код:{{status['code']}})
+                </div>
+                
+                <div class="info-myself">
+                
+                Считаетесь ли Юр. лицом:{%if status['isLegal']%} ДА {%else%} НЕТ {%endif%}
+                </div>
+                
+                <div class="info-myself">
+                Попадаете ли в программу облегчённых налогов:{%if status['isSimpleTax']%} ДА {%else%} НЕТ {%endif%}
+                </div>
+
+            </div>
+        </div>
+
+        <div class="right-myself">
+            <div class="hello-myself">
+                <h1>Управление декларацией</h1>
+            </div>
+            <div class="incomes-myself">
+                <div class="persinf-myself">
+                    <h3>Ваши доходы:</h3>
+                </div>  
+                
+                {% for item in incomes %}
+                <div class="info-myself">  
+                    <div onclick="location.href='/income/{{item['id']}}'" class='click-myself'>
+                    Сумма: {{item['value']}}
+                    <br>
+                    Код: {{item['id']}}
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="add-myself">    
+                    <a href="{{url_for('add_income')}}" role="button">Добавить новый</a>
+                </div>
+            </div>
+            <br>
+            <div class="outcomes-myself">
+                <div class="persinf-myself">
+                    <h3>Ваши расходы:</h3>
+                </div>  
+                  
+                {% for item in expenses %}
+                <div class="info-myself"> 
+                    <div onclick="location.href='/expense/{{item['id']}}'" class='click-myself'>
+                        Сумма: {{item['value']}}
+                        <br>
+                        Код: {{item['id']}}
+                    </div>
+                </div>    
+                {% endfor %}
+                <div class="add-myself">   
+                    <a href="{{url_for('add_expense')}}" role="button">Добавить новый</a>
+                </div>  
+            </div>
+        </div>
+    </div>    
+    <div class='botton-myself'>
+        <a href="{{url_for('logout')}}" role="button" class="quit-myself">Выйти</a>
+    </div>    
+
+</body>
+</html>

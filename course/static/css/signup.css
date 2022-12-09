@@ -1,0 +1,37 @@
+.title-reg {
+	text-align: center;
+	font-size: 30px;
+	background-color: #F5DEB3;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	outline: 2px solid #000;
+	font-family: 'Bender'
+}
+
+.regform-reg {
+	padding-left: 50px;
+	border-radius: 30px;
+	box-shadow: 2px 2px 2px 2px black;
+	margin-top: 200px;
+	margin-bottom: 300px;
+	margin-left: 37%;
+	margin-right: 37%;
+	background-color: #f5f5f5;
+}
+
+.name-reg {
+	text-align: center;
+	font-size: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.input-reg {
+	padding: 5px 5px 5px 5px;
+}
+
+.btn-reg {
+	padding-left: 28%;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}

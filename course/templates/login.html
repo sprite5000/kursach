@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link href="../static/css/Bender.ttf" rel="stylesheet" >
+</head>
+<body >
+	<div class='title-login'>Налоговая инспекиция</div>
+
+	<div class='lform-login'>
+		<div class='name-login'>Вход в личный кабинет</div>
+		<div class="form-login">
+			<form action="" method="post" >
+				<div class="in-login">
+			    	<input name="email" type="text" placeholder="email" required="required" class="input-login"/>
+			    </div>
+			    <br>
+			    <div class="in-login">
+			    	<input type="password" name="password" placeholder="Password" required="required" class="input-login"/>
+			    </div>
+			    <div class="in-login">
+				    {% for cat, msg in get_flashed_messages(True) %}
+				    	<div class="flash"><b>{{msg}}</b></div>
+					{% endfor %}
+				</div>
+			    <div class="enter-login">
+			    <button type="submit">Войти</button>
+			    <br>
+			    <label for="remainme">Запомнить меня</label>
+			    <input type="checkbox" name="remainme" title="Запомнить меня"/> 
+			    
+			    </div>
+			</form>
+
+			<b>Ещё нет аккаунта?</b>
+			<a href="{{url_for('signup')}}">Регистрация</a>
+		</div>
+	</div>
+
+</body>
+</html>

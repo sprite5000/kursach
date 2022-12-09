@@ -1,0 +1,49 @@
+.title-login {
+	text-align: center;
+	font-size: 30px;
+	background-color: #F5DEB3;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	outline: 2px solid #000;
+	font-family: 'Bender'
+}
+/*#f5f5f5*/
+.name-login {
+	text-align: center;
+	font-size: 30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.lform-login {
+	border-radius: 30px;
+	box-shadow: 2px 2px 2px 2px black;
+	margin-top: 200px;
+	margin-bottom: 300px;
+	margin-left: 37%;
+	margin-right: 37%;
+	background-color: #f5f5f5;
+}
+
+.form-login {
+	text-align: center;
+	padding: 20px 10% 20px 10%; 
+	margin-bottom: 30px;
+}
+
+.input-login {
+	text-align: center;
+}
+
+.in-login {
+	padding: 0px 0px 3px 0px; 
+}
+
+.enter-login {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+
+
+
